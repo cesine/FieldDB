@@ -1,3 +1,4 @@
+// "use strict";
 /* globals FieldDB */
 
 var FieldDBObject = require("./FieldDBObject").FieldDBObject;
@@ -47,7 +48,7 @@ var Collection = function Collection(json) {
     this.collection = json.collection;
   }
   this.debug("  array of length " + this.collection.length);
-  Object.apply(this, arguments);
+  Object.apply(this, [json]);
 };
 
 Collection.notWorthSortingSize = 100;

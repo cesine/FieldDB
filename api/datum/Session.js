@@ -1,3 +1,5 @@
+"use strict";
+
 var Confidential = require("./../confidentiality_encryption/Confidential").Confidential;
 var DatumFields = require("./DatumFields").DatumFields;
 var DataList = require("./../data_list/DataList").DataList;
@@ -92,7 +94,7 @@ var Session = function Session(options) {
     this.initializeDatalist();
   }
   this.debug(" -> ", options.datalist);
-  FieldDBObject.apply(this, arguments);
+  FieldDBObject.apply(this, [options]);
   this.debug("   after construction: ", this._datalist);
 };
 

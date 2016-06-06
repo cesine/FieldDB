@@ -1,3 +1,5 @@
+"use strict";
+
 /* globals document, window, navigator, Media, FileReader */
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
 var Q = require("q");
@@ -22,7 +24,7 @@ var AudioVideoRecorder = function AudioVideoRecorder(options) {
     this.element = options.element;
   }
 
-  Object.apply(this, arguments);
+  Object.apply(this, [options]);
 };
 AudioVideoRecorder.Recorder = RecordMP3.Recorder;
 

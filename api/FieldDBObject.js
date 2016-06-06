@@ -134,7 +134,7 @@ var FieldDBObject = function FieldDBObject(json) {
   if (simpleModels.length > 0) {
     this.debug("simpleModels", simpleModels.join(", "));
   }
-  Object.apply(this, arguments);
+  Object.apply(this, [json]);
   // if (!this._rev) {
   if (!this.id && !this._dateCreated) {
     this.dateCreated = Date.now();

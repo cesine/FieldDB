@@ -30,7 +30,7 @@ var Glosser = function Glosser(options) {
   options = options || {};
 
   this.debug("Constructing Glosser length: ", options);
-  FieldDBObject.apply(this, arguments);
+  FieldDBObject.apply(this, [options]);
 };
 
 Glosser.morphemeBoundaryRegEX = /[-=]/g;

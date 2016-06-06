@@ -1,3 +1,5 @@
+"use strict";
+
 var Confidential = require("./../confidentiality_encryption/Confidential").Confidential;
 var DataList = require("./../data_list/DataList").DataList;
 var Activity = require("./Activity").Activity;
@@ -49,8 +51,7 @@ var Activities = function Activities(options) {
       connection: options
     };
   }
-  this.debug("Constructing Activities ", options);
-  DataList.apply(this, arguments);
+  DataList.apply(this, [options]);
 };
 
 Activities.prototype = Object.create(DataList.prototype, /** @lends Activities.prototype */ {

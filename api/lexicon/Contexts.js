@@ -1,3 +1,5 @@
+"use strict";
+
 var Collection = require("./../Collection").Collection;
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
 
@@ -15,7 +17,7 @@ var Context = function Context(options) {
       this[member] = options[member];
     }
   }
-  Object.apply(this, arguments);
+  Object.apply(this, [options]);
 };
 
 Context.prototype = Object.create(Object.prototype, /** @lends Context.prototype */ {

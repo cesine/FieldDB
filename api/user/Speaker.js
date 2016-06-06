@@ -1,3 +1,5 @@
+"use strict";
+
 var Confidential = require("./../confidentiality_encryption/Confidential").Confidential;
 var DatumFields = require("./../datum/DatumFields").DatumFields;
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
@@ -40,7 +42,7 @@ var Speaker = function Speaker(options) {
     options = options || {};
     options.fields = this.defaults.fields;
   }
-  UserMask.apply(this, arguments);
+  UserMask.apply(this, [options]);
 };
 
 Speaker.prototype = Object.create(UserMask.prototype, /** @lends Speaker.prototype */ {

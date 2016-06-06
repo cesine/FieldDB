@@ -1,3 +1,5 @@
+"use strict";
+
 /* globals window, URL */
 
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
@@ -64,7 +66,7 @@ var Connection = function Connection(options) {
       }
     });
   }
-  FieldDBObject.apply(this, arguments);
+  FieldDBObject.apply(this, [options]);
 };
 
 Connection.DEFAULT_LOCALHOST_CONNECTION = function(options) {

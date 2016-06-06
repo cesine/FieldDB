@@ -1,3 +1,5 @@
+"use strict";
+
 /* globals window, document */
 
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
@@ -98,7 +100,7 @@ var Authentication = function Authentication(options) {
     return error;
   });
 
-  FieldDBObject.apply(this, arguments);
+  FieldDBObject.apply(this, [options]);
 };
 
 Authentication.prototype = Object.create(FieldDBObject.prototype, /** @lends Authentication.prototype */ {

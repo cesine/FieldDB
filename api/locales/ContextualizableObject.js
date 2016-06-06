@@ -1,3 +1,5 @@
+"use strict";
+
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject,
   Q = require("q");
 
@@ -53,7 +55,7 @@ var ContextualizableObject = function ContextualizableObject(json) {
     this.add(member, json[member]);
   }
 
-  Object.apply(this, arguments);
+  Object.apply(this, [json]);
 };
 
 var forcedebug = false;

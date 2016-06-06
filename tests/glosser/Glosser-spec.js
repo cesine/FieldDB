@@ -50,6 +50,9 @@ var expectedErrors = function(reason) {
 	} else if (reason.status === 600) {
 		expect(reason.userFriendlyErrors[0]).toContain("you appear to be offline");
 		return true;
+	} else if (reason.status === 401) {
+		expect(reason.userFriendlyErrors[0]).toContain("You are not authorized to access this db.");
+		return true;
 	} else {
 		return false;
 	}

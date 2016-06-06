@@ -1,3 +1,5 @@
+"use strict";
+
 // console.log("Loading DataList.js");
 
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
@@ -35,7 +37,7 @@ var DataList = function DataList(options) {
     // this.debug("DataList comments", options.comments);
     // this.debug("DataList comments", options.comments);
   }
-  FieldDBObject.apply(this, arguments);
+  FieldDBObject.apply(this, [options]);
   this.debug("   Constructed datalist ", this);
 };
 

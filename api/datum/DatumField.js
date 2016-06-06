@@ -1,3 +1,5 @@
+"use strict";
+
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
 var Confidential = require("./../confidentiality_encryption/Confidential").Confidential;
 
@@ -33,7 +35,7 @@ var DatumField = function DatumField(options) {
   if (options && options.value) {
     options._value = options.value;
   }
-  FieldDBObject.apply(this, arguments);
+  FieldDBObject.apply(this, [options]);
 };
 
 DatumField.prototype = Object.create(FieldDBObject.prototype, /** @lends DatumField.prototype */ {

@@ -133,7 +133,7 @@ describe("Session: as a linguist I often collect data in an elicitation session"
 
     it("should set the goal", function() {
       var session = new Session();
-      expect(session.fields).toBeUndefined();
+      expect(session.fields).toBeDefined();
       session.goal = "Collecting examples of accusative experiencers";
       expect(session.fields.goal.value).toEqual("Collecting examples of accusative experiencers");
     });

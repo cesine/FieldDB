@@ -1,3 +1,5 @@
+"use strict";
+
 /* globals localStorage */
 var Activities = require("./../activity/Activities").Activities;
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
@@ -37,7 +39,7 @@ var User = function User(options) {
   }
 
   this.debug("Constructing User length: ", options);
-  UserMask.apply(this, arguments);
+  UserMask.apply(this, [options]);
 
   if (this.username) {
     this.id = this.username;

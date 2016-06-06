@@ -1,3 +1,5 @@
+"use strict";
+
 /* globals window */
 // var node_cryptojs = require("node-cryptojs-aes");
 // var CryptoJS = node_cryptojs.CryptoJS;
@@ -57,7 +59,7 @@ var Confidential = function Confidential(options) {
     this.fillWithDefaults();
     delete options.filledWithDefaults;
   }
-  FieldDBObject.apply(this, arguments);
+  FieldDBObject.apply(this, [options]);
 };
 
 /**

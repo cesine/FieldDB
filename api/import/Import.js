@@ -1,3 +1,5 @@
+"use strict";
+
 /* globals window, escape, $, FileReader, FormData, unescape, Blob */
 var FieldDBImage = require("./../image/Image").Image;
 var AudioVideo = require("./../audio_video/AudioVideo").AudioVideo;
@@ -1453,7 +1455,14 @@ Import.prototype = Object.create(FieldDBObject.prototype, /** @lends Import.prot
     }
   },
 
-  metadataLines: [],
+  metadataLines: {
+    get: function() {
+      return this._metadataLines || []
+    },
+    set: function(value) {
+      this._metadataLines = value;
+    }
+  },
 
   /**
    * This function takes in a text block, splits it on lines and then
