@@ -1,5 +1,3 @@
-"use strict";
-
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
 var Confidential = require("./../confidentiality_encryption/Confidential").Confidential;
 

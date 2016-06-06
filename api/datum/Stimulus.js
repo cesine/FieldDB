@@ -1,5 +1,3 @@
-"use strict";
-
 var LanguageDatum = require("./LanguageDatum").LanguageDatum;
 
 /**

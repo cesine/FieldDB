@@ -1,5 +1,3 @@
-"use strict";
-
 var Stimulus = require("./Stimulus").Stimulus,
   Q = require("q");
 

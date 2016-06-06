@@ -1,6 +1,4 @@
-"use strict";
-
-/*globals FileReader, CryptoJS, OPrime, Blob, FormData, expect*/
+/*globals FileReader, CryptoJS, OPrime, Blob, FormData */
 
 var AudioService = function(url, user, connection, datumid) {
 

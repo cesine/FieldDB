@@ -1,5 +1,3 @@
-"use strict";
-
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
 var DatumFields = require("./../datum/DatumFields").DatumFields;
 var Corpora = require("./../corpus/Corpora").Corpora;

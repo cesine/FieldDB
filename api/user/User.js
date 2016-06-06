@@ -1,5 +1,3 @@
-"use strict";
-
 /* globals localStorage */
 var Activities = require("./../activity/Activities").Activities;
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;

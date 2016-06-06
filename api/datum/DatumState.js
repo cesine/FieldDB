@@ -1,5 +1,3 @@
-"use strict";
-
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
 var UserMask = require("./../user/UserMask").UserMask;
 

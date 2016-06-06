@@ -1,5 +1,3 @@
-"use strict";
-
 /* globals window, localStorage, navigator */
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
 var ELanguages = require("./ELanguages").ELanguages;

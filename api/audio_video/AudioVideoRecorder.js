@@ -1,5 +1,3 @@
-"use strict";
-
 /* globals document, window, navigator, Media, FileReader */
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
 var Q = require("q");

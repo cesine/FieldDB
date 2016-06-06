@@ -1,5 +1,3 @@
-"use strict";
-
 var DatumTags = require("./DatumTags").DatumTags;
 var DatumState = require("./DatumState").DatumState;
 

@@ -1,5 +1,3 @@
-"use strict";
-
 var DocumentCollection = require("./DocumentCollection").DocumentCollection;
 var Datum = require("./Datum").Datum;
 

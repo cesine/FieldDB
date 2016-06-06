@@ -1,5 +1,3 @@
-"use strict";
-
 var Collection = require("./../Collection").Collection;
 var HotKey = require("./HotKey").HotKey;
 

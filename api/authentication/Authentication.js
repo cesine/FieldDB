@@ -1,5 +1,3 @@
-"use strict";
-
 /* globals window, document */
 
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;

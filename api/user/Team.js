@@ -1,5 +1,3 @@
-"use strict";
-
 var UserMask = require("./UserMask").UserMask;
 
 /**

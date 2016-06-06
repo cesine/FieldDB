@@ -1,5 +1,3 @@
-"use strict";
-
 /* globals document, Media */
 
 var HTML5Audio = require("./HTML5Audio").HTML5Audio,
