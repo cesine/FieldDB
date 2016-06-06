@@ -1,4 +1,5 @@
 "use strict";
+
 var Datum;
 try {
   /* globals FieldDB */

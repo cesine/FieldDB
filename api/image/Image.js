@@ -1,3 +1,5 @@
+"use strict";
+
 var AudioVideo = require("./../audio_video/AudioVideo").AudioVideo;
 
 /**

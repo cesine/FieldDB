@@ -1,3 +1,5 @@
+"use strict";
+
 // console.log("Loading DataList.js");
 
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;

@@ -1,5 +1,6 @@
-/* globals runs, waitsFor */
+"use strict";
 
+/* globals runs, waitsFor */
 
 var runCORSTests = function(whichServer) {
 

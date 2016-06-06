@@ -1,3 +1,5 @@
+"use strict";
+
 var FieldDBDatabase = require("./Database").Database;
 
 var PsycholinguisticsDatabase = function PsycholinguisticsDatabase(options) {

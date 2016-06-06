@@ -1,3 +1,5 @@
+"use strict";
+
 describe("Test Bot", function() {
   it("should create a bot", function() {
     expect(true).toBeTruthy();

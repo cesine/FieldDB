@@ -1,3 +1,5 @@
+"use strict";
+
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject,
   Q = require("q");
 

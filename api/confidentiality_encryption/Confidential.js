@@ -1,3 +1,5 @@
+"use strict";
+
 /* globals window */
 // var node_cryptojs = require("node-cryptojs-aes");
 // var CryptoJS = node_cryptojs.CryptoJS;

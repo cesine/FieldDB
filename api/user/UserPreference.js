@@ -1,3 +1,5 @@
+"use strict";
+
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
 var HotKeys = require("./../hotkey/HotKeys").HotKeys;
 var UnicodeSymbols = require("./../unicode/UnicodeSymbols").UnicodeSymbols;

@@ -1,3 +1,5 @@
+"use strict";
+
 var CORS = require("../CORS");
 var Q = require("q");
 var BASE_LEXICON_NODE = require("./../datum/LanguageDatum").LanguageDatum;

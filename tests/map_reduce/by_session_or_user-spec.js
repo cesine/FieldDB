@@ -1,3 +1,5 @@
+"use strict";
+
 var mapReduceFactory = require("./../../api/map_reduce/MapReduce").MapReduceFactory;
 var byUserModifiedMapString = require("../../map_reduce_data/views/by_session_or_user/map").byUserModified;
 

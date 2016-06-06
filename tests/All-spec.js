@@ -1,3 +1,5 @@
+"use strict";
+
 exports.basePath = "./";
 exports.runTests = function() {
   require(exports.basePath + "CollectionTest");

@@ -1,3 +1,5 @@
+"use strict";
+
 /* global window, OPrime */
 var Confidential = require("./../confidentiality_encryption/Confidential").Confidential;
 var CorpusMask = require("./CorpusMask").CorpusMask;

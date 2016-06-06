@@ -1,3 +1,5 @@
+"use strict";
+
 /* globals spyOn , FieldDB */
 
 var DataList;

@@ -1,3 +1,5 @@
+"use strict";
+
 /* globals window, escape, $, FileReader, FormData, unescape, Blob */
 var FieldDBImage = require("./../image/Image").Image;
 var AudioVideo = require("./../audio_video/AudioVideo").AudioVideo;

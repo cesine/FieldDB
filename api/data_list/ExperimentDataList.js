@@ -1,3 +1,5 @@
+"use strict";
+
 var SubExperimentDataList = require("./SubExperimentDataList").SubExperimentDataList;
 var DocumentCollection = require("./../datum/DocumentCollection").DocumentCollection;
 var Comments = require("./../comment/Comments").Comments;

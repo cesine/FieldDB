@@ -1,3 +1,5 @@
+"use strict";
+
 var debugMode = false;
 /*jslint evil: true */
 var MapReduceFactory = function(options) {

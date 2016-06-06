@@ -1,3 +1,5 @@
+"use strict";
+
 var Collection = require("./../Collection").Collection;
 var Comment = require("./Comment").Comment;
 

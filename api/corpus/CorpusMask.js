@@ -1,3 +1,5 @@
+"use strict";
+
 var Confidential = require("./../confidentiality_encryption/Confidential").Confidential;
 var Activities = require("./../activity/Activities").Activities;
 var Database = require("./Database").Database;

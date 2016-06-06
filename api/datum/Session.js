@@ -1,3 +1,5 @@
+"use strict";
+
 var Confidential = require("./../confidentiality_encryption/Confidential").Confidential;
 var DatumFields = require("./DatumFields").DatumFields;
 var DataList = require("./../data_list/DataList").DataList;

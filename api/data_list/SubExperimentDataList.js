@@ -1,3 +1,5 @@
+"use strict";
+
 var DataList = require("./DataList").DataList;
 var Stimulus = require("./../datum/Stimulus").Stimulus;
 var DocumentCollection = require("./../datum/DocumentCollection").DocumentCollection;

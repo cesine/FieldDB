@@ -1,3 +1,5 @@
+"use strict";
+
 describe("Test DatumMenu", function() {
 	it("should initialize the DatumMenu", function() {
 		expect(true).toBeTruthy();
@@ -33,6 +35,6 @@ describe("Test DatumMenu", function() {
 	it("should open a new datum with fields filled just like previous datum", function() {
 		expect(true).toBeTruthy();
 		//expect(dm.duplicateDatum()).toEqual(d);
-		//TODO	
+		//TODO
 	});
 });

@@ -1,3 +1,5 @@
+"use strict";
+
 describe("Test Datums", function() {
   it("should print collection", function() {
     expect(true).toBeTruthy();
@@ -126,7 +128,7 @@ describe("Test Datums", function() {
   //                {id: 77, utterance: "purunaywanmi"},
   //                {utterance:"allillanchu"}
   //                ]);
-  //        
+  //
   //        var d = dc.create({
   //          utterance: "+Hall-pa-nay-wa-n "
   //        });

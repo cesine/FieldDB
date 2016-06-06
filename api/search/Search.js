@@ -1,3 +1,5 @@
+"use strict";
+
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
 var DataList = require("./../data_list/DataList").DataList;
 

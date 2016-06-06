@@ -1,3 +1,5 @@
+"use strict";
+
 var CORS = require("../../api/CORS").CORS;
 
 var mapReduceFactory = require("./../../api/map_reduce/MapReduce").MapReduceFactory;

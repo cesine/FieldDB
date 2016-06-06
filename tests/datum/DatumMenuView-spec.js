@@ -1,3 +1,5 @@
+"use strict";
+
 // require([
 //  "sinon",
 //  "datum_menu/DatumMenu",

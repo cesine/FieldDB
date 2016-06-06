@@ -1,3 +1,5 @@
+"use strict";
+
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
 var AudioPlayer = require("./AudioPlayer").AudioPlayer;
 var mime = require("browserify-mime");
