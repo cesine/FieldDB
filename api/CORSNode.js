@@ -1,3 +1,5 @@
+"use strict";
+
 var Q = require("q");
 var http = require("http");
 var https = require("https");

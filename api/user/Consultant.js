@@ -1,3 +1,5 @@
+"use strict";
+
 var Speaker = require("./Speaker").Speaker;
 var DEFAULT_CORPUS_MODEL = require("./../corpus/corpus.json");
 

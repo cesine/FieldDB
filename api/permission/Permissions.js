@@ -1,3 +1,5 @@
+"use strict";
+
 var Collection = require("./../Collection").Collection;
 var Permission = require("./Permission").Permission;
 var Users = require("./../user/Users").Users;
