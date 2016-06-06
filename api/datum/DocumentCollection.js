@@ -1,3 +1,5 @@
+"use strict";
+
 var Collection = require("./../Collection").Collection;
 var FieldDBObject = require("./../FieldDBObject").FieldDBObject;
 
