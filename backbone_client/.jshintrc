@@ -4,5 +4,6 @@
   "jasmine": true,
   "noarg": true,
   "node": false,
+  "strict": true,
   "predef": ["define"]
 }
