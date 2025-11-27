@@ -53,9 +53,9 @@ ls /Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text || {
   echo ''
   sleep 3
   open -a Google\ Chrome http://www.sublimetext.com;
-  exit 1;
+  # exit 1;
 }
-echo 'alias sublime="open -a /Applications/Sublime\ Text.app/ ."'  >> $HOME/.bash_profile
+echo 'alias sublime="open -a /Applications/Sublime\ Text.app/ ."'  >> $HOME/.bashrc
 
 # We need node to be able to modify the code, anyone who is running this script should have that too.
 node --version || {
@@ -81,35 +81,35 @@ exit 1;
 echo " Installing grunt, gulp, browserify, jasmine-node, jshint, bower and other development dependancies which are used to work on the project"
 which grunt || {
   echo "Installing grunt globally (required to build and manage modules) "
-  npm install -g grunt-cli
+  # npm install -g grunt-cli
 }
 which gulp || {
   echo "Installing gulp globally (required to build and manage modules) "
-  npm install -g gulp
+  # npm install -g gulp
 }
 which jasmine-node || {
   echo "Installing jasmine-node globally (required to run our test suites) "
-  npm install -g git://github.com/kacperus/jasmine-node.git
+  # npm install -g git://github.com/kacperus/jasmine-node.git
 }
 which jshint || {
   echo "Installing jshint globally (required to make sure your code is well-formed) "
-  npm install -g jshint
+  # npm install -g jshint
 }
 which bower || {
   echo "Installing bower globally (required to install client side dependancies for many modules) "
-  npm install -g bower
+  # npm install -g bower
 }
 which phantomjs || {
   echo "Installing phantomjs globally (required to run browser tests, website scrapers, server side render, and other fun headless things you will probably like to do) "
-  npm install -g phantomjs
-  # echo "export PHANTOMJS_BIN=`which phantomjs`" >> $HOME/.bash_profile # this is done automatically by npm install -g
-  # source $HOME/.bash_profile
+  # npm install -g phantomjs
+  # echo "export PHANTOMJS_BIN=`which phantomjs`" >> $HOME/.bashrc # this is done automatically by npm install -g
+  # source $HOME/.bashrc
 }
 which karma || {
   echo "Installing karma globally (required to run angular tests) "
-  npm install -g karma
-  npm install -g karma-phantomjs-launcher
-  npm install -g karma-chrome-launcher
+  # npm install -g karma
+  # npm install -g karma-phantomjs-launcher
+  # npm install -g karma-chrome-launcher
 }
 
 
@@ -117,7 +117,7 @@ which karma || {
 #gcc --version || { echo 'You dont have a C++ compiler installed, please install it and other developer tools: sudo apt-get build-dep nodejs  or http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12' ; exit 1; }
 
 # In general, you should already have an ssh key set up, if not, this will help you set one up.
-cat $HOME/.ssh/id_rsa.pub  ||  {
+cat $HOME/.ssh/id_ed25519.pub  ||  {
   echo "Enter the email you want to associate to your GitHub account"
   echo -n "(e.g. me@gmail.com) and press [ENTER]: "
   read email;
@@ -137,7 +137,7 @@ cat $HOME/.ssh/id_rsa.pub  ||  {
 }
 
 echo "Making fielddb directory which will house the fielddb code, in case you need it"
-echo "export FIELDDB_HOME=$FIELDDB_HOME" >> $HOME/.bash_profile
+echo "export FIELDDB_HOME=$FIELDDB_HOME" >> $HOME/.bashrc
 
 
 mkdir $FIELDDB_HOME
@@ -160,7 +160,7 @@ echo " Installing build dependancies (managed by NPM)"
 npm install
 
 echo " Running jshint, tests and building core and setting up symblic links"
-grunt travis
+# grunt travis
 
 echo "What is your GitHub username (so we can set that to the origin of the repos instead of the main project)"
 echo -n "(e.g. myusernameontgithub) and press [ENTER]: "
@@ -173,7 +173,7 @@ git config --global user.username || {
 }
 
 echo " Generating js docs so you can browse the documentation "
-grunt docs
+# grunt docs
 echo " Opening js docs so you can browse the documentation, if you like that kind of thing "
 echo ''
 echo ''
@@ -194,13 +194,13 @@ echo "Building the Prototype App, it was written in Backbone.js, and needs you t
 echo "Preparing to compiling the Prototype's handlebars html templates so you can see the app if you load it as an unpacked chrome extension...."
 cd backbone_client;
 echo " Installing client side dependancies (managed by Bower)"
-bower install;
+# bower install;
 echo " Installing build dependancies (managed by NPM)"
 npm install;
 
 echo 'The handlebars templates have to be compiled and turned into javascript before you can run the Chrome App (as of Chrome manifest v2 you cant use any sort of Eval in your code, and templates generally require eval. So this means that before you can use the app, we now have "build step" ie, run this script if you have changed anything in the .handlebars files)'
 cd $FIELDDB_HOME/FieldDB
-./scripts/build_fielddb_minified.sh
+# ./scripts/build_fielddb_minified.sh
 echo "If you want to get started developing or using the Offline Chrome App, you now can load it as an Chrome Extension."
 echo 'Instructions:'
 echo ' 1. visit chrome://extensions in a Chrome or Chromium browser'
@@ -218,16 +218,16 @@ open http://developer.chrome.com/extensions/getstarted.html#unpacked;
 
 echo "Building the Core angular components, they are written in Angular.js and need you to bower install its dependancies before you can open the other components which depend on them. It also uses sym links for local files in this project instead of bower "
 cd $FIELDDB_HOME/FieldDB
-./scripts/build_fielddb_angular_core.sh
+# ./scripts/build_fielddb_angular_core.sh
 
 echo "Building the Spreadsheet App, it is written in Angular.js and needs you to bower install its dependancies before you can open it"
 cd $FIELDDB_HOME/FieldDB
-./scripts/build_spreadsheet_angular.sh
+# ./scripts/build_spreadsheet_angular.sh
 
 
 echo "Building the Corpus pages app, it is written in Angular.js and needs you to bower install its dependancies before you can open it. It also uses sym links for local files in this project instead of bower (these need to be on your computer, although we will eventually move them to bower when they are stable)"
 cd $FIELDDB_HOME/FieldDB
-./scripts/build_corpuspages_angular.sh
+# ./scripts/build_corpuspages_angular.sh
 
 
 ## FieldDB Libs/Plugins ###################################################
@@ -364,8 +364,8 @@ ls /Applications/Praat.app/Contents/MacOS/Praat || {
   echo ''
   sleep 3
   open -a Google\ Chrome http://www.fon.hum.uva.nl/praat/download_mac.html;
-  # echo "Then add an alias for it in your ~/.bash_profile like this: "
-  # echo ' echo "alias praat=/Applications/Praat.app/Contents/MacOS/Praat"  >> $HOME/.bash_profile'
+  # echo "Then add an alias for it in your ~/.bashrc like this: "
+  # echo ' echo "alias praat=/Applications/Praat.app/Contents/MacOS/Praat"  >> $HOME/.bashrc'
 }
 
 echo -en '\E[47;35m'"\033[1mJ"   # Magenta
@@ -479,7 +479,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
     sudo chown -R fielddb /usr/local/var/lib/fielddb
 
     echo "Setting up  NODE_ENV='production'"
-    echo "export NODE_ENV='production'" >> $HOME/.bash_profile
+    echo "export NODE_ENV='production'" >> $HOME/.bashrc
 
     echo "Downloading server configs from a private repo"
     cd $FIELDDB_HOME
@@ -507,14 +507,7 @@ curl http://localhost:5984/new_corpus || {
   echo "Installing the databases you need to develop offline (or to create a new FieldDB node in the FieldDB web)"
 
   cd $FIELDDB_HOME/AuthenticationWebService
-  git fetch https://github.com/cesine/AuthenticationWebService.git installable
-  git checkout 16f9bad6b356a829eb237ff842c03da2002b000d
-  NODE_TLS_REJECT_UNAUTHORIZED="0" node service.js &
-  sleep 10
-  curl -k https://localhost:3183/api/install
-  git checkout master
-  sleep 200
-
+  npm run docker:test
 }
 
 ## Running tests to see if everything downloaded and works ###################################################
